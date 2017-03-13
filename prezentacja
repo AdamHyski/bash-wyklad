@@ -1,0 +1,136 @@
+#!/bin/bash
+function pause(){
+   read -p "[Enter]"
+   clear
+}
+
+echo "> Konsole są różne... <" | ponysay -f faust
+pause
+echo "To jak? PS czy XBOX ? " | ponysay -f pinkiecrazyface
+pause
+echo "Filozofia Unixa
+Do one thing and do it well - Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface.
+
+Everything is file - Ease of use and security is offered by treating hardware as a file.
+
+Small is beautiful.
+
+Store data and configuration in flat text files - Text file is a universal interface. Easy to create, backup and move to another system.
+
+Use shell scripts to increase leverage and portability - Use shell script to automate common tasks across various UNIX / Linux installations.
+
+Chain programs together to complete complex task - Use shell pipes and filters to chain small utilities that perform one task at time.
+
+Choose portability over efficiency.
+
+Keep it Simple, Stupid (KISS).
+"| ponysay -f angel
+pause
+echo "Myśląc konsole mam na myśli powłokę [en. Interface] " | ponysay -f fancypants
+pause
+echo "Powłoka systemowa (ang. shell) – program komputerowy pełniący rolę pośrednika pomiędzy systemem operacyjnym lub aplikacjami a użytkownikiem, przyjmując jego polecenia i „wyprowadzając” wyniki działania programów. [Wiki] " | ponythink -f rainbow
+pause
+echo "Interpreter (interpretator) poleceń (ang. command processor) – część systemu operacyjnego odpowiedzialna za tłumaczenie i wykonywanie poleceń systemowych wprowadzanych przez użytkownika w trybie konwersacyjnym lub w trybie wsadowym.[Wiki]" | ponythink -f tank
+pause
+echo "CLI  - Interpreter (interpretator) poleceń – część systemu operacyjnego odpowiedzialna za tłumaczenie i wykonywanie poleceń systemowych wprowadzanych przez użytkownika w trybie konwersacyjnym lub w trybie wsadowym.[Wiki]" | ponythink -f raccoon
+pause
+echo "Terminal (ang. terminal – końcówka) to urządzenie pozwalające człowiekowi na pracę z komputerem lub systemem komputerowym. Terminal musi posiadać urządzenie wejściowe do wprowadzania instrukcji oraz urządzenie wyjściowe do przekazywania informacji operatorowi. Terminal jest stacją sieci komputerowej lub w systemie (np. w Internecie), służącą do wprowadzania lub odczytywania danych. [Wiki]" | ponythink -f braeburn
+pause
+echo "Konsola emulator terminala" | ponysay  -f octavia
+pause
+echo "> Procesy <" | ponysay -f zecorabalance
+pause
+echo "Skąd prcesy są uruchamiane? Czyli jak to się dzieje że wpisujemy ls i wyświetla się zawartość katalogu?" | ponysay -f winona
+pause
+echo 'echo $PATH' | ponysay -f tom
+pause
+echo "Jak można lepiej użyć PATH i czego w/g mnie brakuje w zsh, zaraz to naprawimy ;) " | ponysay -f stevenmagnet
+pause
+echo 'PATH="$PATH:$USER\bin"
+take bin
+vim gh
+#!/bin/bash
+grep alias $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh | grep  --color=auto  "$*" ' | ponythink -f squirrel
+pause
+echo "ale zajrzyjmy do .zshrc " | ponysay -f stevenmagnettrue
+pause
+echo 'Jak zainstalować node.js żeby nie było przypału z uprawnieniami?
+wget https://nodejs.org/dist/v7.7.2/node-v7.7.2-linux-x64.tar.xz
+tar xf node-v7.7.2-linux-x64.tar.xz
+mv -r node-v7.7.2-linux-x64 node
+PATH="$PATH:$HOME/node/bin"' | ponysay -f spot
+pause
+echo "> Uprawnienia do plików i użytkownicy <" | ponysay -f rover
+pause
+echo " Jak poradzić sobie z raportami w magento i czemu nie ma do nich dostępu?" | ponysay -f twilightrage
+pause
+echo "
+Litera	Znaczenie	Parametr Liczbowy
+r	prawo odczytu	        4
+w	prawo zapisu	        2
+x	prawo uruchomienia	1
+-	brak praw dostępu	0" | ponysay -f twilightthebearded
+pause
+echo "
+root@lancerto: ~
+# cat /etc/apache2/envvars
+.
+.
+.
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data
+" | ponysay -f redheart
+pause
+echo "> Przydatne programy <" | ponysay
+pause
+echo "Przetwarzanie tekstu :
+cat – wypisywanie i łączenie plików
+cut – wycina określone znaki z wejścia (zazwyczaj z pliku)
+grep – wypisywanie linii pasujących do wzorca
+head – wypisanie pierwszych 10 linijek tekstu
+tail – wypisanie ostatnich 10 linijek tekstu
+" | ponysay -f raritydrama
+pause
+echo 'Operatory  :' | ponysay -f ahuizotl
+pause
+echo '&& – wykonaj jeśli poprzednie polecenie zakończyło się sukcesem, np. `./configure && make bzImage`' | ponysay -f applefritter
+pause
+echo ' ; – bezwzględne wykonanie, np. `clear ; echo -e "Fajnie!"`' | ponysay -f applejackscarecrow
+pause
+echo ' > – przekierowanie standardowego wyjścia (czyli to co program wypisze w konsoli) do pliku, np. `cat /proc/cpuinfo > ~/cpuinfo.txt`
+Można też przekierować strumień błędu do pliku wówczas kończy się polecenie 2>error.log ' | ponysay -f basil
+pause
+echo ' < – przekierowanie do standardowego wejścia, np. `mysql < dump.sql`' | ponysay -f beautybrass
+pause
+echo ' | – skierowanie standardowego wyjścia do potoku, który obsłuży program trzeci, np. `ps -aux | grep spotyfi |  `' | ponysay -f bigmac
+pause
+echo 'ale jest pkill '  | ponysay -f bigmacsleep
+pause
+echo ' & – wykonanie programu w tle, np. sudo synaptic &. Program taki nie podaje danych do terminala i pozostawia go możliwym do użycia.' | ponysay -f blueblood
+pause
+echo ' `komenda` – wykonanie polecenie bashowego w trakcie wykonywania poprzedniego polecenia, np. `clear && echo -en "\033[1;31mInformacje o procesorze:\033[1;0m\n`cat < /proc/cpuinfo`\n"` – należy zwrócić uwagę na operator "`", przerywa on na chwilę działanie skryptu, wykonuje polecenie `cat` i kieruje standardowe wyjście w miejsce operatorów ``. Parametry programu echo – \033[y;xxm ustawiają kolory – y to kolor tła, x to kolor napisów.' | ponysay -f caesar
+pause
+echo "Procesy:
+htop: czyli lepszy top
+ps: wyświetla procesy /ps -aux/
+kill: ubija " | ponysay -f caramel
+pause
+echo "Pliki:
+ls – listowanie zawartości katalogu
+pwd – wydruk aktualnego katalogu
+cp – kopiowanie plików
+scp – transfer plików bezpiecznym kanałem, SSH, na zdalny host
+rsync – oba powyższe lepiej
+ln – tworzenie dowiązań twardych i symbolicznych
+rm – usuwanie plików i katalogów
+cat – wypisywanie i łączenie plików
+find – przeszukiwanie systemu plików
+touch – zamiana daty ostatniej modyfikacji, lub dostępu do pliku bądź utworzenie pustego pliku
+chgrp – zmiana grupy pliku
+chmod – zmiana praw dostępu do pliku
+chown – zmiana właściciela/grupy pliku
+" | ponysay -f carrotcake
+pause
+echo "Pytania? " | ponysay -f  bearbear
+pause
+echo "Dziękuję  " | ponysay -f  bearbear
